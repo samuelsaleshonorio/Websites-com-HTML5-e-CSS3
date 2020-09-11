@@ -1,0 +1,78 @@
+<HTML>
+<SCRIPT>
+window.onkeydown = function(event) {
+   //var event = window.event ? window.event : e; 
+   var1 = event.keyCode;
+   //var2 = event.keyCode;
+
+   x1 = document.getElementById('D1').style.left;
+   x1 = parseFloat(x1, 10);
+   y1 = document.getElementById('D1').style.top;
+   y1 = parseFloat(y1, 10);
+   x2 = document.getElementById('D2').style.left;
+   x2 = parseFloat(x2, 10)
+   y2 = document.getElementById('D2').style.top;
+   y2 = parseFloat(y2, 10);
+
+   if((x1-100) == x2 || (x1+100) == x2){
+	alert("BATEU!!!");
+   }
+
+   if (var1 == 68){	
+		//a = parseFloat(x1, 10);
+		document.getElementById('D1').style.left = x1 + 10;
+   }
+   if (var1 == 65){
+		//alert('ESQUERDA');
+		//a = parseFloat(x1, 10);
+		document.getElementById('D1').style.left = x1 - 10;
+   }
+   if (var1 == 87){
+		//alert('CIMA');
+		//a = parseFloat(y1, 10);
+		document.getElementById('D1').style.top = y1 - 10;
+   }   
+   if (var1 == 83){
+		//alert('BAIXO');
+		//a = parseFloat(y1, 10);
+		document.getElementById('D1').style.top = y1 + 10;
+   }
+
+   if (var1==39){	
+		a = parseFloat(x2, 10);
+		document.getElementById('D2').style.left = x2 + 10;
+   }
+   if (var1==37){
+		//alert('ESQUERDA');
+		//a = parseFloat(x2, 10);
+		document.getElementById('D2').style.left = x2 - 10;
+   }
+   if (var1==38){
+		//alert('CIMA');
+		a = parseFloat(y2, 10);
+		document.getElementById('D2').style.top = y2 - 10;
+   }   
+   if (var1==40){
+		//alert('BAIXO');
+		//a = parseFloat(y2, 10);
+		document.getElementById('D2').style.top = y2 + 10;
+   }    
+}
+</SCRIPT>
+<BODY>
+
+<DIV id="D1" style="position:absolute;top:100px;left:100px;width:100px;height:100px;
+background-color:blue">
+
+</DIV>
+
+<DIV id="D2" style="position:absolute;top:100px;left:600px;width:100px;height:100px;
+background-color:red">
+
+</DIV>
+
+
+
+</BODY>
+
+</HTML>
